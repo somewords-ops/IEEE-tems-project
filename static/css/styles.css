@@ -1,0 +1,278 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fffaf0; /* Light ivory background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px; /* Added padding to prevent overlap with fixed navbar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #b8860b; /* Gold for headings */
+    font-weight: bold;
+}
+
+p, a, li {
+    color: #333;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #b8860b;
+}
+
+a:hover {
+    color: #daa520; /* Slightly lighter gold on hover */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #b8860b; /* Gold navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important; /* White text */
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #ffd700 !important; /* Bright gold hover */
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #b8860b;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #daa520; /* Lighter gold */
+    color: #fff;
+}
+
+/* Card Styles */
+.card {
+    border: 2px solid #b8860b;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: #b8860b;
+    font-size: 1.5rem;
+}
+
+.card-text {
+    color: #555;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #b8860b;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: #ffd700; /* Golden white text */
+}
+
+.dark-mode .navbar {
+    background-color: #444;
+}
+
+.dark-mode .navbar-brand, .dark-mode .nav-link {
+    color: #ffd700 !important; /* Golden white */
+}
+
+.dark-mode .navbar-brand:hover, .dark-mode .nav-link:hover {
+    color: #ffd700 !important;
+}
+
+.dark-mode .card {
+    background-color: #444;
+    color: #ffd700; /* Golden white text for cards */
+    border: 2px solid #daa520;
+}
+
+.dark-mode .footer {
+    background-color: #444;
+    color: #ffd700; /* Golden white footer text */
+}
+
+.dark-mode .btn-primary {
+    background-color: #daa520;
+    color: #fff;
+}
+
+.dark-mode .btn-primary:hover {
+    background-color: #ffd700;
+    color: #333;
+}
+
+/* Culture Page Specific */
+body.dark-mode .culture-content, /* Class for culture page */
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p {
+    color: #ffd700; /* Golden white text for headings and paragraphs */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+    .card-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Subtle Animations */
+.card img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Festival Calendar Styles */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: #fffaf0;
+    border-radius: 15px;
+    border: 2px solid #b8860b;
+}
+
+.calendar .day {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f5f5dc;
+    transition: background-color 0.3s;
+}
+
+.calendar .day.festival {
+    background-color: #b8860b;
+    color: #fff;
+    font-weight: bold;
+}
+
+.calendar .day.festival:hover {
+    background-color: #daa520;
+}
+
+.dark-mode .calendar {
+    background-color: #444;
+    border: 2px solid #daa520;
+}
+
+.dark-mode .calendar .day {
+    background-color: #555;
+    color: #ffd700; /* Golden white text for dark mode */
+}
+
+.dark-mode .calendar .day.festival {
+    background-color: #daa520;
+}
+
+.dark-mode .calendar .day.festival:hover {
+    background-color: #ffd700;
+    color: #333;
+}
+
+/* Navigation Effects */
+.nav-link {
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffd700;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Feedback Form Styles */
+.feedback-form {
+    background-color: #fffaf0;
+    border: 2px solid #b8860b;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.dark-mode .feedback-form {
+    background-color: #444;
+    border: 2px solid #daa520;
+    color: #ffd700; /* Golden white text for form */
+}
+
+.feedback-form input, .feedback-form textarea {
+    border-radius: 10px;
+    border: 1px solid #b8860b;
+}
+
+.dark-mode .feedback-form input, .dark-mode .feedback-form textarea {
+    background-color: #555;
+    border: 1px solid #daa520;
+    color: #ffd700; /* Golden white text */
+}
+
+.feedback-form button {
+    background-color: #b8860b;
+    color: #fff;
+    font-weight: bold;
+}
+
+.feedback-form button:hover {
+    background-color: #daa520;
+}
+
+/* Dark Mode Toggle Button Styles */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Placed at the top-right corner */
+    z-index: 999; /* Ensures it stays on top */
+    cursor: pointer;
+    font-size: 2.5rem; /* Increased size of the dark mode button */
+    background-color: transparent;
+    border: none;
+    color: #b8860b; /* Gold color */
+}
+
+body.dark-mode #dark-mode-toggle {
+    color: #ffd700; /* Golden white color for dark mode */
+}
